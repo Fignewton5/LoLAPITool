@@ -1,0 +1,137 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.HeaderBar {
+	margin: 0;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+	background-color: #eaeff7;
+}
+
+.LeagueContainer {
+	width: 100%;
+	/*background-color: #696a6d;*/
+	background-color: #5e9bff; /* Google Blue */
+}
+
+.SearchBar {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	height: 100px;
+}
+
+.SearchBar input, .SearchBar button {
+	height: 25px;
+}
+
+.SearchBar input {
+	width: 50%;
+}
+
+.SummonerContainer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding-bottom: 20px;
+}
+
+.SummonerCell {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 300px;
+	box-shadow: 1px 1px 3px 3px;
+	/*background-color: gray;*/
+	background-color: #c8cace; /* Almost Google Gray */
+}
+
+.SummonerCell:hover {
+}
+
+.MatchHistoryHeader {
+	background-color: #eaeff7;
+	margin: 0;
+	padding-top: 1.5em;
+}
+
+.SummonerInfoHeader {
+	margin: 0;
+	padding-top: 1.5em;
+}
+
+.MasteryGridContainer {
+	
+}
+
+.MatchGridContainer {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-start;
+	background-color: #eaeff7;
+}
+
+.MatchCell {
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	flex-basis: 300px;
+	box-shadow: .5px .5px 1px 1px;
+	/*background-color: gray;*/
+	background-color: #c8cace; /* Almost Google Gray */
+	margin: 1em;
+	transition: transform .5s ease-in-out;
+	backface-visibility: hidden;
+	height: 400px;
+}
+
+.MatchCell:hover {
+	transform: rotateY(180deg);
+}
+
+.MatchCell:hover + .MatchCellBackside {
+	transform: rotateY(0deg);
+}
+
+.MatchCellBackside {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	height: 400px;
+	flex-basis: 300px;
+	box-shadow: .5px .5px 1px 1px;
+	/*background-color: gray;*/
+	background-color: #c8cace; /* Almost Google Gray */
+	margin: 1em;
+	transform: rotateY(180deg);
+	transition: transform .5s ease-in-out;
+	top: 0;
+	left: 0;
+	backface-visibility: hidden;
+}
+
+.MatchCellContainer {
+	position: relative;
+}
